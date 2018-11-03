@@ -1,8 +1,12 @@
-#mainPage {
+.jumbotron {
+    width: 80%;
+    height: 600px;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 5%;
     margin-bottom: 10%;
-    
+    margin-top: 10%;
 }
 
+#getStarted {
+    margin-top: 10%;
+}

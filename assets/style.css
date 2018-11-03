@@ -10,3 +10,11 @@
 #getStarted {
     margin-top: 10%;
 }
+
+.cardPage4 {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 2%;
+    float: left;
+}

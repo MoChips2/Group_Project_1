@@ -1,3 +1,4 @@
+ 
 .jumbotron {
     width: 80%;
     height: 600px;
@@ -6,11 +7,15 @@
     margin-bottom: 10%;
     margin-top: 10%;
 }
-
+#titlePage1 {
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
 #getStarted {
     margin-top: 10%;
 }
 
+<<<<<<< HEAD
 #Section3 {
     text-align: center;
     background-image: url(https://thumbs.dreamstime.com/z/italian-food-background-variety-ingredients-over-slate-35112782.jpg);
@@ -22,99 +27,193 @@
     text-align: center;
 }
 
+=======
+#headingPage2 {
+margin-bottom: 5%;
+}
+#divPage2 {
+    height: 400px;
+}
+#card1Page2 {
+    text-align: center;
+    float: left;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 2%;
+    height: 82%;
+    width: 25%;
+}
+#cookimgPage2 {
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+#dishimgPage2 {
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+#card2Page2 {
+    text-align: center;
+    float: left;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 2%;
+    height: 82%;
+    width: 200px;
+}
+
+
+#Section3 {
+    text-align: center;
+    
+}
+#Section5a {
+    text-align: center;
+}
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
 #Btn1Page5a {
     font-size: 150%;
     width: 50%;
     margin-bottom: 3%;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
 #Btn2Page5a {
     font-size: 150%;
     width: 50%;
     margin-bottom: 3%;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
 #Btn3Page5a {
     font-size: 150%;
     width: 50%;
     margin-bottom: 3%;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
 #Btn4Page5a {
     font-size: 150%;
     width: 50%;
 }
+<<<<<<< HEAD
 
 #Section5b {
     background-image: url(https://thumbs.dreamstime.com/z/italian-food-background-variety-ingredients-over-slate-35112782.jpg);
     text-align: center;
 }
 
+=======
+#Section5b {
+    text-align: center;
+}
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
 #Btn1Page5b {
     font-size: 150%;
     width: 50%;
     margin-bottom: 3%;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
 #Btn2Page5b {
     font-size: 150%;
     width: 50%;
     margin-bottom: 3%;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
 #Btn3Page5b {
     font-size: 150%;
     width: 50%;
     margin-bottom: 3%;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
 #Btn4Page5b {
     font-size: 150%;
     width: 50%;
 }
+<<<<<<< HEAD
 
 #Section6b{
     background-image: url(https://thumbs.dreamstime.com/z/italian-food-background-variety-ingredients-over-slate-35112782.jpg);
     text-align: center;
 }
 
+=======
+#Section6b{
+    text-align: center;
+}
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
 #Btn1Page6b {
     font-size: 150%;
     width: 50%;
     margin-bottom: 2%;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
 #Btn2Page6b {
     font-size: 150%;
     width: 50%;
     margin-bottom: 2%;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
 #Btn3Page6b {
     font-size: 150%;
     width: 50%;
     margin-bottom: 2%;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
 #Btn4Page6b {
     font-size: 150%;
     width: 50%;
     margin-bottom: 2%
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
 #Btn5Page6b {
     font-size: 150%;
     width: 50%;
     margin-bottom: 2%
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
 #Btn6Page6b {
     font-size: 150%;
     width: 10%;
 }
+<<<<<<< HEAD
 
 #Section6a{
     background-image: url(https://thumbs.dreamstime.com/z/italian-food-background-variety-ingredients-over-slate-35112782.jpg);
+=======
+#Section6a{
+>>>>>>> a4910f2e4f756641a7252f380840df455e0a2552
     text-align: center;
 }

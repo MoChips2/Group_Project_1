@@ -10,24 +10,24 @@
 </head>
 <body>
     
-    <div class="jumbotron" id="mainPage1" style="background-image: url(http://www.amifood.be/wp-content/uploads/2017/04/image-6.jpg); background-size: cover;">
+    <div class="jumbotron" id="startPage">
         <h1 class="display-4 text-center text-white" id="titlePage1">What Should I Eat?</h1>
         <div class="text-center">
             <button class="btn btn-light btn-lg text-center text-black" id="getStarted" >Get Started</button>
         </div>
     </div>
 
-    <div class="jumbotron" id="mainPage2" style="background-image: url(http://www.amifood.be/wp-content/uploads/2017/04/image-6.jpg); background-size: cover;">
+    <div class="jumbotron" id="InOutPage">
         <h2 class="display-4 text-center text-white" id="headingPage2">Are you looking to..</h2>
         <div class="col d-flex justify-content-center" id="divPage2">
-            <button class="btn btn-light btn-lg text-center" id="card1Page2">
+            <button class="btn btn-light btn-lg text-center" id="DineInButton">
                 <div class="card-body">
                     <br><h3 class="card-title">Dine In</h3>
                     <img id="cookimgPage2" src="assets/cooking.png" alt="cooking" width="100" height="100"><br><br> 
                     <h4 class="card-subtitle mb-2 text-muted">Prepare a meal</h4>
                 </div>
             </button>
-            <button class="btn btn-light btn-lg text-center" id="card2Page2">
+            <button class="btn btn-light btn-lg text-center" id="EatOutButton">
                 <div class="card-body">
                     <br><h3 class="card-title">Eat Out</h3>
                     <img id="dishimgPage2" src="assets/dish.png" alt="cooking" width="100" height="100"><br><br>
@@ -37,49 +37,111 @@
         </div>
     </div>
 
-    <div class="jumbotron" id="mainPage3" style="background-image: url(http://www.amifood.be/wp-content/uploads/2017/04/image-6.jpg); background-size: cover;">
-        <h2 class="display-4 text-center text-white" id="headingPage3">Would you like..</h2><br><br>
-        <div class="col d-flex justify-content-center" id="divPage3">
-            <button class="btn btn-light btn-lg text-center" id="card1Page3">
-                <div class="card-body">
-                    <br><h3 class="card-title">Breakfast</h3>
-                    <img id="cookimgPage2" src="assets/breakfast.png" alt="breakfast" width="100" height="100"><br><br> 
+    <div class="jumbotron" id="MealTypePage1">
+            <h2 class="display-4 text-center text-white" id="headingPage3">Would you like..</h2><br><br>
+            <div class="col d-flex justify-content-center" id="divPage3">
+                <button class="btn btn-light btn-lg text-center" id="BreakfastButton1">
+                    <div class="card-body">
+                        <br><h3 class="card-title">Breakfast</h3>
+                        <img id="cookimgPage2" src="assets/breakfast.png" alt="breakfast" width="100" height="100"><br><br> 
+                    </div>
+                </button>
+                <button class="btn btn-light btn-lg text-center" id="DinnerButton1">
+                    <div class="card-body">
+                        <br><h3 class="card-title">Lunch/Dinner</h3>
+                        <img id="dishimgPage2" src="assets/dish.png" alt="cooking" width="100" height="100"><br><br>
+                    </div>
+                </button>
+                <button class="btn btn-light btn-lg text-center" id="DessertButton1">
+                    <div class="card-body">
+                        <br><h3 class="card-title">Dessert</h3>
+                        <img id="dishimgPage2" src="assets/dessert.png" alt="dessert" width="100" height="100"><br><br>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div class="jumbotron" id="MealTypePage2">
+                <h2 class="display-4 text-center text-white" id="headingPage3">Would you like..</h2><br><br>
+                <div class="col d-flex justify-content-center" id="divPage3">
+                    <button class="btn btn-light btn-lg text-center" id="BreakfastButton2">
+                        <div class="card-body">
+                            <br><h3 class="card-title">Breakfast</h3>
+                            <img id="cookimgPage2" src="assets/breakfast.png" alt="breakfast" width="100" height="100"><br><br> 
+                        </div>
+                    </button>
+                    <button class="btn btn-light btn-lg text-center" id="DinnerButton2">
+                        <div class="card-body">
+                            <br><h3 class="card-title">Lunch/Dinner</h3>
+                            <img id="dishimgPage2" src="assets/dish.png" alt="cooking" width="100" height="100"><br><br>
+                        </div>
+                    </button>
+                    <button class="btn btn-light btn-lg text-center" id="DessertButton2">
+                        <div class="card-body">
+                            <br><h3 class="card-title">Dessert</h3>
+                            <img id="dishimgPage2" src="assets/dessert.png" alt="dessert" width="100" height="100"><br><br>
+                        </div>
+                    </button>
                 </div>
-            </button>
-            <button class="btn btn-light btn-lg text-center" id="card2Page3">
-                <div class="card-body">
-                    <br><h3 class="card-title">Lunch/Dinner</h3>
-                    <img id="dishimgPage2" src="assets/dish.png" alt="cooking" width="100" height="100"><br><br>
-                </div>
-            </button>
-            <button class="btn btn-light btn-lg text-center" id="card3Page3">
-                <div class="card-body">
-                    <br><h3 class="card-title">Dessert</h3>
-                    <img id="dishimgPage2" src="assets/dessert.png" alt="dessert" width="100" height="100"><br><br>
-                </div>
-            </button>
+            </div>
+
+
+
+    <div class="jumbotron" id="CuisinePage1">
+            <h1 class="display-4 text-center text-white">Cuisine Type</h1><br>
+        <div class="col d-flex justify-content-center">
+            <button type="button" id="AmericanButton1" class="btn btn-light text-black cuisineclass">American</button>
+            <br>
+            <button type="button" id="ChineseButton1" class="btn btn-light text-black cuisineclass">Chinese</button>
+            <br>
+            <button type="button" id="MexicanButton1" class="btn btn-light text-black cuisineclass">Mexican</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <button type="button" id="ItalianButton1" class="btn btn-light text-black cuisineclass">Italian</button>
+            <br>
+            <button type="button" id="IndianButton1" class="btn btn-light text-black cuisineclass">Indian</button>
+            <br>
+            <button type="button" id="MediterraneanButton1" class="btn btn-light text-black cuisineclass">Mediterranean</button>
         </div>
     </div>
 
-    <div class="jumbotron" id="mainPage4" style="background-image: url(http://www.amifood.be/wp-content/uploads/2017/04/image-6.jpg); background-size: cover;">
+        <div class="jumbotron" id="CuisinePage2">
+            <h1 class="display-4 text-center text-white">Cuisine Type</h1><br>
+            <div class="col d-flex justify-content-center">
+                <button type="button" id="AmericanButton2" class="btn btn-light text-black cuisineclass">American</button>
+                <br>
+                <button type="button" id="ChineseButton2" class="btn btn-light text-black cuisineclass">Chinese</button>
+                <br>
+                <button type="button" id="MexicanButton2" class="btn btn-light text-black cuisineclass">Mexican</button>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <button type="button" id="ItalianButton2" class="btn btn-light text-black cuisineclass">Italian</button>
+                <br>
+                <button type="button" id="IndianButton2" class="btn btn-light text-black cuisineclass">Indian</button>
+                <br>
+                <button type="button" id="MediterraneanButton2" class="btn btn-light text-black cuisineclass">Mediterranean</button>
+            </div>              
+        </div>
+
+    <div class="jumbotron" id="PricePage">
         <h2 class="display-4 text-center text-white" id="headingPage4">Choose your price range</h2><br><br><br>
         <div class="col d-flex justify-content-center" id="divPage4">
-            <button class="btn btn-light btn-lg text-center" id="card1Page4">
+            <button class="btn btn-light btn-lg text-center priceclass" id="Price1">
                 <div class="card-body">
                     <h1 class="card-title">$</h1>  
                 </div>
             </button>
-            <button class="btn btn-light btn-lg text-center" id="card2Page4">
+            <button class="btn btn-light btn-lg text-center priceclass" id="Price2">
                 <div class="card-body">
                     <h1 class="card-title">$$</h1>  
                 </div>
             </button>
-            <button class="btn btn-light btn-lg text-center" id="card3Page4">
+            <button class="btn btn-light btn-lg text-center priceclass" id="Price3">
                 <div class="card-body">
                     <h1 class="card-title">$$$</h1>  
                 </div>
             </button>
-            <button class="btn btn-light btn-lg text-center" id="card4Page4">
+            <button class="btn btn-light btn-lg text-center priceclass" id="Price4">
                 <div class="card-body">
                     <h1 class="card-title">$$$$</h1>  
                 </div>
@@ -87,30 +149,30 @@
         </div>
     </div>
 
-    <div class="jumbotron" id="mainPage4" style="background-image: url(http://www.amifood.be/wp-content/uploads/2017/04/image-6.jpg); background-size: cover;">
+    <div class="jumbotron" id="TimePage">
         <h2 class="display-4 text-center text-white" id="headingPage4">Prep time </h2><br><br><br>
         <div class="col d-flex justify-content-center" id="divPage4">
-            <button class="btn btn-light btn-lg text-center" id="card1Page4">
+            <button class="btn btn-light btn-lg text-center timeclass" id="U30Button">
                 <div class="card-body">
                     <h3 class="card-title">under 30</h3>
                     <h3>minutes</h3>
                 </div>
             </button>
-            <button class="btn btn-light btn-lg text-center" id="card2Page4">
+            <button class="btn btn-light btn-lg text-center timeclass" id="U60Button">
                 <div class="card-body">
                     <h3 class="card-title">under 60</h3>
                     <h3>minutes</h3>  
                 </div>
             </button>
-            <button class="btn btn-light btn-lg text-center" id="card3Page4">
+            <button class="btn btn-light btn-lg text-center timeclass" id="U90Button">
                 <div class="card-body">
                     <h3 class="card-title">under 90</h3>
                     <h3>minutes</h3>
                 </div>
             </button>
-            <button class="btn btn-light btn-lg text-center" id="card4Page4">
+            <button class="btn btn-light btn-lg text-center timeclass" id="noLimitButton">
                 <div class="card-body">
-                        <h3 class="card-title">90+</h3>
+                        <h3 class="card-title">No time limit</h3>
                         <h3>minutes</h3>  
                 </div>
             </button>
@@ -118,46 +180,37 @@
     </div>
    
 
-    <div class="jumbotron" id="Section6b" style="background-image: url(http://www.amifood.be/wp-content/uploads/2017/04/image-6.jpg); background-size: cover;">
+    <div class="jumbotron" id="AllergyPage">
         <h1 class="display-4 text-center text-white">Do you have any allergies?</h1>
-        <br>
-        <button type="button" id="Btn1Page6b" class="btn btn-light text-black" data-toggle="button" aria-pressed="false"
-            autocomplete="off">
-            Gluten
-        </button>
-        <br>
-        <button type="button" id="Btn2Page6b" class="btn btn-light text-black" data-toggle="button" aria-pressed="false"
-            autocomplete="off">
-            Nut
-        </button>
-        <br>
-        <button type="button" id="Btn3Page6b" class="btn btn-light text-black" data-toggle="button" aria-pressed="false"
-            autocomplete="off">
-            Dairy
-        </button>
-        <br>
-        <button type="button" id="Btn4Page6b" class="btn btn-light text-black" data-toggle="button" aria-pressed="false"
-            autocomplete="off">
-            Seafood
-        </button>
-        <button type="button" id="Btn5Page6b" class="btn btn-light text-black" data-toggle="button" aria-pressed="false"
-            autocomplete="off">
-            None
-        </button>
-        <br>
-        <button type="button" id="Btn6Page6b" class="btn btn-light text-black" data-toggle="button" aria-pressed="false"
-            autocomplete="off">
-            Submit
-        </button>
+        <div class="col d-flex justify-content-center">
+            <button type="button" id="GlutenButton" class="btn btn-light text-black allergyclass">Gluten</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <button type="button" id="NutButton" class="btn btn-light text-black allergyclass">Nut</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <button type="button" id="DairyButton" class="btn btn-light text-black allergyclass">Dairy</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <button type="button" id="ShellfishButton" class="btn btn-light text-black allergyclass">Shellfish</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <button type="button" id="noAllergyButton" class="btn btn-light text-black allergyclass">None</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <button type="button" id="AllergyButton" class="btn btn-light text-black allergyclass">Submit</button>
+        </div>
     </div>
 
-    <div class="jumbotron" id="Section6a" style="background-image: url(http://www.amifood.be/wp-content/uploads/2017/04/image-6.jpg); background-size: cover;">
+    <div class="jumbotron" id="LocationPage">
         <h2 class="display-4 text-center text-white" id="headingPage8">City/State</h2>
         <form>
-            <div id="stateDiv">   
+            <div class="col d-flex justify-content-center" id="stateDiv">   
                 <div class="form-group">
                     <input type="text" class="form-control" id="City">
                 </div>
+            </div>
+            <div class="col d-flex justify-content-center">
                 <div class="form-group" id="stateSelector">
                     <div>
                         <select class="form-control" id="state" name="state">
@@ -217,16 +270,22 @@
                         </select>
                     </div>
                 </div>
-            </div>   
-            <h3 class="display-4 text-white">-or-</h3>
-            <div id="zipDiv">
+            </div>
+  
+            <h3 class="display-4 text-center text-white">-or-</h3>
+            <div class="col d-flex justify-content-center" id="zipDiv">
                 <div class="form-group">
                     <label for="zipCode" class="display-4 text-white">Zip Code</label>
                     <input type="text" class="form-control" id="zipCode">
                 </div>
-                <button type="submit" class="btn btn-light text-black">Submit</button>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <button type="submit" id="LocationSubmitButton" class="btn btn-light text-black">Submit</button>
             </div>
         </form>
     </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/app.js"></script>
 </body>
 </html>

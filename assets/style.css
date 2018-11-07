@@ -1,5 +1,7 @@
  
 .jumbotron {
+    background-image: url(http://www.amifood.be/wp-content/uploads/2017/04/image-6.jpg); 
+    background-size: cover;
     width: 80%;
     height: 600px;
     margin-left: 10%;
@@ -22,7 +24,7 @@ margin-bottom: 5%;
 #divPage2 {
     height: 400px;
 }
-#card1Page2 {
+#DineInButton {
     text-align: center;
     float: left;
     margin-right: 3%;
@@ -41,7 +43,7 @@ margin-bottom: 5%;
     margin-bottom: 5%;
 }
 
-#card2Page2 {
+#EatOutButton {
     text-align: center;
     float: left;
     margin-left: 3%;
@@ -52,7 +54,7 @@ margin-bottom: 5%;
 }
 
 
-#card1Page3 {
+#BreakfastButton1 {
     text-align: center;
     float: left;
     margin-right: 3%;
@@ -61,7 +63,7 @@ margin-bottom: 5%;
     height: 82%;
     width: 260px;
 }
-#card2Page3 {
+#DinnerButton1 {
     text-align: center;
     float: left;
     margin-right: 3%;
@@ -70,7 +72,7 @@ margin-bottom: 5%;
     height: 82%;
     width: 260px;
 }
-#card3Page3 {
+#DessertButton1 {
     text-align: center;
     float: left;
     margin-right: 3%;
@@ -80,10 +82,56 @@ margin-bottom: 5%;
     width: 260px;
 }
 
+#BreakfastButton2 {
+    text-align: center;
+    float: left;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 2%;
+    height: 82%;
+    width: 260px;
+}
+#DinnerButton2 {
+    text-align: center;
+    float: left;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 2%;
+    height: 82%;
+    width: 260px;
+}
+#DessertButton2 {
+    text-align: center;
+    float: left;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 2%;
+    height: 82%;
+    width: 260px;
+}
+
+.cuisineclass {
+    width: 200px;
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 180px;
+}
+
+.allergyclass {
+    width: 300px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    
+}
+#AllergyButton {
+    width: 200px;
+}
 #divPage4 {
     height: 400px;
 }
-#card1Page4 {
+.priceclass {
     text-align: center;
     float: left;
     margin-right: 3%;
@@ -92,25 +140,8 @@ margin-bottom: 5%;
     height: 50%;
     width: 260px;
 }
-#card2Page4 {
-    text-align: center;
-    float: left;
-    margin-right: 3%;
-    margin-left: 3%;
-    margin-bottom: 2%;
-    height: 50%;
-    width: 260px;
-}
-#card3Page4 {
-    text-align: center;
-    float: left;
-    margin-right: 3%;
-    margin-left: 3%;
-    margin-bottom: 2%;
-    height: 50%;
-    width: 260px;
-}
-#card4Page4 {
+
+.timeclass {
     text-align: center;
     float: left;
     margin-right: 3%;
@@ -122,101 +153,6 @@ margin-bottom: 5%;
 
 
 
-#stateDiv {
-}
-#zipDiv{
-    
-}
-#zipCode {
-   
-}
 
 
 
-
-
-
-
-#Section3 {
-    text-align: center;
-    
-}
-#Section5a {
-    text-align: center;
-}
-#Btn1Page5a {
-    font-size: 150%;
-    width: 50%;
-    margin-bottom: 3%;
-    }
-#Btn2Page5a {
-    font-size: 150%;
-    width: 50%;
-    margin-bottom: 3%;
-}
-#Btn3Page5a {
-    font-size: 150%;
-    width: 50%;
-    margin-bottom: 3%;
-}
-#Btn4Page5a {
-    font-size: 150%;
-    width: 50%;
-}
-#Section5b {
-    text-align: center;
-}
-#Btn1Page5b {
-    font-size: 150%;
-    width: 50%;
-    margin-bottom: 3%;
-    }
-#Btn2Page5b {
-    font-size: 150%;
-    width: 50%;
-    margin-bottom: 3%;
-}
-#Btn3Page5b {
-    font-size: 150%;
-    width: 50%;
-    margin-bottom: 3%;
-}
-#Btn4Page5b {
-    font-size: 150%;
-    width: 50%;
-}
-#Section6b{
-    text-align: center;
-}
-#Btn1Page6b {
-    font-size: 150%;
-    width: 50%;
-    margin-bottom: 2%;
-    }
-#Btn2Page6b {
-    font-size: 150%;
-    width: 50%;
-    margin-bottom: 2%;
-}
-#Btn3Page6b {
-    font-size: 150%;
-    width: 50%;
-    margin-bottom: 2%;
-}
-#Btn4Page6b {
-    font-size: 150%;
-    width: 50%;
-    margin-bottom: 2%
-}
-#Btn5Page6b {
-    font-size: 150%;
-    width: 50%;
-    margin-bottom: 2%
-}
-#Btn6Page6b {
-    font-size: 150%;
-    width: 10%;
-}
-#Section6a{
-    text-align: center;
-}

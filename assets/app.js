@@ -266,8 +266,10 @@ function getLatLng(){
         })
 }
 //recipe API
+
 function getRecipes(){
     var recipeUrl = "https://api.edamam.com/search"
+   
 
     recipeUrl += '?' + $.param({
         'app_id' : '488cc2c7',
@@ -279,13 +281,13 @@ function getRecipes(){
         url: recipeUrl,
         method: "GET"
         }).then(function(response) {
-            var results = response.data;
+            var results = response.hits;
             console.log(response);
             for (var i = 0; i < results.length; i++) {
                 var newRecipe = $("<tr>").append(
-                    $("<td>").text(results.hits[i].recipe.image),
-                    $("<td>").text(results.hits[i].recipe.label),
-                    $("<td>").text(results.hits[i].recipe.shareAs),
+                    $("<td>").append("<img src='" + results[i].recipe.image + "' alt=foodimage height='100' width='100'>"),
+                    $("<td>").text(results[i].recipe.label),
+                    $("<td>").append("<a href='" + results[i].recipe.shareAs + "'>See Recipe</>"),
                 );
                 
                 $("#resultsTable > tbody").append(newRecipe);

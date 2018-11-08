@@ -1,3 +1,4 @@
+
 var LATI = 0;
 var LONG = 0;
 
@@ -334,6 +335,3 @@ google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(map, this);
 });
 }
-
-
-// create for loop to generate table rows in results page

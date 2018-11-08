@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>What Should I Eat?</title>
 </head>
+
 <body>
     
     <div class="jumbotron" id="startPage">
@@ -191,7 +195,7 @@
                 <div class="form-group" id="stateSelector">
                     <div>
                         <select class="form-control" id="state" name="state">
-                            <option value=""></option>
+                            <option value="">State</option>
                             <option value="AK">Alaska</option>
                             <option value="AL">Alabama</option>
                             <option value="AR">Arkansas</option>
@@ -261,7 +265,6 @@
             </div>
         </form>
     </div>
-
     <div class="jumbotron" id="resultsPage">
         <table class="table table-striped table-hover" id="resultsTable">
                 <thead>
@@ -274,7 +277,6 @@
                 <tbody id="recipeEntry">
                 </tbody>
                 </table>
-
     </div>
 
     <div class="jumbotron" id="MapPage">

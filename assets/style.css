@@ -151,6 +151,18 @@ margin-bottom: 5%;
     width: 260px;
 }
 
+#resultsTable {
+    background-color: white;
+}
+
+#resultsPage {
+overflow: auto;
+max-height: 600px;
+}
+
+#map {
+    height: 1000%;
+  }
 
 
 

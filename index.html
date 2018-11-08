@@ -178,29 +178,6 @@
             </button>
         </div>
     </div>
-   
-
-    <div class="jumbotron" id="AllergyPage">
-        <h1 class="display-4 text-center text-white">Do you have any allergies?</h1>
-        <div class="col d-flex justify-content-center">
-            <button type="button" id="GlutenButton" class="btn btn-light text-black allergyclass">Gluten</button>
-        </div>
-        <div class="col d-flex justify-content-center">
-            <button type="button" id="NutButton" class="btn btn-light text-black allergyclass">Nut</button>
-        </div>
-        <div class="col d-flex justify-content-center">
-            <button type="button" id="DairyButton" class="btn btn-light text-black allergyclass">Dairy</button>
-        </div>
-        <div class="col d-flex justify-content-center">
-            <button type="button" id="ShellfishButton" class="btn btn-light text-black allergyclass">Shellfish</button>
-        </div>
-        <div class="col d-flex justify-content-center">
-            <button type="button" id="noAllergyButton" class="btn btn-light text-black allergyclass">None</button>
-        </div>
-        <div class="col d-flex justify-content-center">
-            <button type="button" id="AllergyButton" class="btn btn-light text-black allergyclass">Submit</button>
-        </div>
-    </div>
 
     <div class="jumbotron" id="LocationPage">
         <h2 class="display-4 text-center text-white" id="headingPage8">City/State</h2>
@@ -284,8 +261,27 @@
             </div>
         </form>
     </div>
+
+    <div class="jumbotron" id="resultsPage">
+        <table class="table table-striped table-hover" id="resultsTable">
+                <thead>
+                    <tr>
+                    <th>Recipe Image</th>
+                    <th>Recipe Name</th>
+                    <th>Recipe Link</th>
+                    </tr>
+                </thead>
+                <tbody id="recipeEntry">
+                </tbody>
+                </table>
+
+    </div>
+
+    <div class="jumbotron" id="MapPage">
+        <div id="map"></div>
+    </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNrl5Q5pMMYeQdFRM_QI3GkEvfNS0l6f4&libraries=places&callback=initMap" async defer></script>
 <script type="text/javascript" src="assets/app.js"></script>
-</body>
 </html>

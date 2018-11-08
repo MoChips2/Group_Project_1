@@ -1,12 +1,13 @@
 var LATI = 0;
 var LONG = 0;
-
+var zipInput = 0;
 var cuisineInput2 = "";
 var cuisineInput1 = "";
 var timeInput = "";
 var allergyInput = "";
 
 $(document).ready(function(){
+    // Hiding pages until they are called by button clicks
     $("#InOutPage").hide();
     $("#MealTypePage1").hide();
     $("#MealTypePage2").hide();
@@ -16,6 +17,8 @@ $(document).ready(function(){
     $("#TimePage").hide();
     $("#AllergyPage").hide();
     $("#LocationPage").hide();
+    $("#MapPage").hide();
+    $("#resultsPage").hide();
 
     $("#getStarted").on("click", function() {
         $("#startPage").hide();
@@ -33,38 +36,6 @@ $(document).ready(function(){
                 cuisineInput1 = "breakfast"
                 console.log(cuisineInput1);
             }); 
-
-                $("#U30Button").on("click", function() {
-                    $("#TimePage").hide();
-                    $("#resultsPage").show();
-                    timeInput = "0-30";
-                    console.log(timeInput);
-                    getRecipes();
-                }); 
-
-                $("#U60Button").on("click", function() {
-                    $("#TimePage").hide();
-                    $("#resultsPage").show();
-                    timeInput = "0-60";
-                    console.log(timeInput);
-                    getRecipes();
-                }); 
-
-                $("#U90Button").on("click", function() {
-                    $("#TimePage").hide();
-                    $("#resultsPage").show();
-                    timeInput = "0-90";
-                    console.log(timeInput);
-                    getRecipes();
-                }); 
-
-                $("#NoLimitButton").on("click", function() {
-                    $("#TimePage").hide();
-                    $("#resultsPage").show();
-                    timeInput = "0-1000";
-                    console.log(timeInput);
-                    getRecipes();
-                }); 
 
             $("#DinnerButton1").on("click", function() {
                 $("#MealTypePage1").hide();
@@ -106,34 +77,6 @@ $(document).ready(function(){
                     $("#TimePage").show();
                     cuisineInput1 = "Mediterranean Dinner"
                 }); 
-
-                    $("#U30Button").on("click", function() {
-                        $("#TimePage").hide();
-                        $("#resultsPage").show();
-                        timeInput = "0-30";
-                        getRecipes();
-                    }); 
-
-                    $("#U60Button").on("click", function() {
-                        $("#TimePage").hide();
-                        $("#resultsPage").show();
-                        timeInput = "0-60";
-                        getRecipes();
-                    }); 
-
-                    $("#U90Button").on("click", function() {
-                        $("#TimePage").hide();
-                        $("#resultsPage").show();
-                        timeInput = "0-90";
-                        getRecipes();
-                    }); 
-
-                    $("#NoLimitButton").on("click", function() {
-                        $("#TimePage").hide();
-                        $("#resultsPage").show();
-                        timeInput = "0-1000";
-                        getRecipes();
-                    }); 
 
             $("#DessertButton1").on("click", function() {
                 $("#MealTypePage1").hide();
@@ -178,13 +121,8 @@ $(document).ready(function(){
                 $("#MealTypePage2").hide();
                 $("#LocationPage").show();
                 cuisineInput2 = "breakfast";
+                console.log(cuisineInput2)
             }); 
-
-                    $("#LocationSubmitButton").on("click", function() {
-                        $("#LocationPage").hide();
-                        //$("#").show(); results page
-                        // add parameters from entries of the form to api
-                    }); 
 
             $("#DinnerButton2").on("click", function() {
                 $("#MealTypePage2").hide();
@@ -207,6 +145,7 @@ $(document).ready(function(){
                     $("#CuisinePage2").hide();
                     $("#LocationPage").show();
                     cuisineInput2 = 'mexican';
+                    console.log(cuisineInput2)
                 }); 
 
                 $("#ItalianButton2").on("click", function() {
@@ -227,30 +166,27 @@ $(document).ready(function(){
                     cuisineInput2 = "Mediterranean";
                 }); 
 
-                        $("#LocationSubmitButton").on("click", function() {
-                            $("#LocationPage").hide();
-                            //$("#").show(); results page
-                            // add parameters from entries of the form to api
-                        }); 
-
             $("#DessertButton2").on("click", function() {
                 $("#MealTypePage2").hide();
                 $("#LocationPage").show();
                 cuisineInput2 = "Dessert";
             }); 
 
-                    $("#LocationSubmitButton").on("click", function() {
+                    $("#LocationSubmitButton").on("click", function(submitfunction) {
+                        zipInput = $("#zipCode").val().trim();
+                        console.log(zipInput)
+                        submitfunction.preventDefault();
                         $("#LocationPage").hide();
-                        //$("#").show(); results page
-                        // add parameters from entries of the form to api
+                        $("#MapPage").show();
+                        getLatLng();
                     }); 
 });
-//zip convert to LAT LNG coordinates
+// function that uses a Google Maps API to convert user zip code input into lat/lng coordinates
 function getLatLng(){
     var convertUrl = "https://maps.googleapis.com/maps/api/geocode/json"
 
     convertUrl += '?' + $.param({
-        'address' : locationInput,
+        'address' : zipInput,
         'key' : 'AIzaSyDNrl5Q5pMMYeQdFRM_QI3GkEvfNS0l6f4',
     })
         $.ajax({
@@ -258,11 +194,48 @@ function getLatLng(){
           method: "GET"
         }).then(function(response) {
             console.log(response);
-            lat = response.results[0].geometry.location.lat
-            lng = response.results[0].geometry.location.lng
-            console.log(lat)
-            console.log(lng)
-        })
+            LATI = response.results[0].geometry.location.lat
+            LONG = response.results[0].geometry.location.lng
+            console.log(LATI)
+            console.log(LONG)
+        }).then(function(){
+            var mapMarker = {lat: LATI, lng: LONG};
+            console.log(mapMarker)
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: mapMarker,
+                zoom: 12,
+            });
+
+            infowindow = new google.maps.InfoWindow();
+            var service = new google.maps.places.PlacesService(map);
+            service.nearbySearch({
+                location: mapMarker,
+                radius: 8000,
+                type: ['restaurant'],
+                keyword: cuisineInput2,
+            }, callback);
+            function callback(results, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    for (var i = 0; i < results.length; i++) {
+                    createMarker(results[i]);
+                    }
+                }
+                }
+                
+                function createMarker(place) {
+                var placeLoc = place.geometry.location;
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: place.geometry.location
+                });
+                
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.setContent(place.name);
+                    infowindow.open(map, this);
+                });
+                }
+        });
+         
 }
 //recipe API
 function getRecipes(){
@@ -280,6 +253,7 @@ function getRecipes(){
         }).then(function(response) {
             var results = response.data;
             console.log(response);
+            // loop to display recipes on results page
             for (var i = 0; i < results.length; i++) {
                 var newRecipe = $("<tr>").append(
                     $("<td>").text(results.hits[i].recipe.image),
@@ -291,49 +265,3 @@ function getRecipes(){
             }
         });
 }
-
-//Map API
-var map;
-var infowindow;
-
-function initMap() {
-var mapMarker = {lat: LATI, lng: LONG};
-console.log(mapMarker)
-map = new google.maps.Map(document.getElementById('map'), {
-    center: mapMarker,
-    zoom: 15
-});
-
-infowindow = new google.maps.InfoWindow();
-var service = new google.maps.places.PlacesService(map);
-service.nearbySearch({
-    location: mapMarker,
-    radius: 16000,
-    type: ['restaurant'],
-    keyword: cuisineInput2,
-}, callback);
-}
-
-function callback(results, status) {
-if (status === google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i < results.length; i++) {
-    createMarker(results[i]);
-    }
-}
-}
-
-function createMarker(place) {
-var placeLoc = place.geometry.location;
-var marker = new google.maps.Marker({
-    map: map,
-    position: place.geometry.location
-});
-
-google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent(place.name);
-    infowindow.open(map, this);
-});
-}
-
-
-// create for loop to generate table rows in results page
